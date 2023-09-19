@@ -1,13 +1,36 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer base {
+
+    @font-face {
+        font-family: "Outfit-Light";
+        src: url('/public/fonts/Outfit-Light.woff2')format('woff2'), url('/public/fonts/Outfit-Light.woff')format('woff');
+    }
+
+    @font-face {
+        font-family: "Outfit-Medium";
+        src: url('/public/fonts/Outfit-Medium.woff2')format('woff2'), url('/public/fonts/Outfit-Medium.woff')format('woff');
+    }
+
+    @font-face {
+        font-family: "Outfit-Regular";
+        src: url('/public/fonts/Outfit-Regular.woff2')format('woff2'), url('/public/fonts/Outfit-Regular.woff')format('woff');
+    }
+
+    @font-face {
+        font-family: "Outfit-Bold";
+        src: url('/public/fonts/Outfit-Bold.woff2')format('woff2'), url('/public/fonts/Outfit-Bold.woff')format('woff');
+    }
+
+    @font-face {
+        font-family: "Ethnocentric";
+        src: url('/public/fonts/ethnocentric rg it.ttf');
+    }
+
+    @font-face {
+        font-family: "Ferretface";
+        src: url('/public/fonts/ferretface.ttf');
+    }
 }

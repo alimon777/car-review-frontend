@@ -11,7 +11,8 @@ module.exports = {
         'Outfit-Medium': "Outfit-Medium",
         'Outfit-Bold': "Outfit-Bold",
         "Ethnocentric": "Ethnocentric",
-        "Ferretface": "FerretFace"
+        "Ferretface": "FerretFace",
+        "heading": "heading"
       },
       backgroundImage: {
         'login-signup': "url('/src/assets/bg.jpeg')",

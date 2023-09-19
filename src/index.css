@@ -33,4 +33,9 @@
         font-family: "Ferretface";
         src: url('/public/fonts/ferretface.ttf');
     }
+
+    @font-face {
+        font-family: "heading";
+        src: url('/public/fonts/headingstyle.ttf');
+    }
 }

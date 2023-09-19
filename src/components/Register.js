@@ -2,7 +2,7 @@ import { useRef, useState, useEffect } from "react";
 import { faInfoCircle, faExclamationCircle, faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import axios from '../api/axios';
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 // import { useNavigate } from "react-router-dom";
 
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
@@ -245,12 +245,12 @@ const Register = () => {
                         </div>
                     </form>
                 </div>
-                <div className="flex items-center justify-center mb-10 gap-2 text-white">
+                <div className="flex items-center justify-center mb-10 gap-2 text-white whitespace-nowrap">
                     <p>
-                        Don't have an account?
+                        Already have an account?
                     </p>
                     <span className="block hover:text-orange-500 text-white">
-                        <Link to="/">Sign In</Link>
+                        <NavLink to="/login">Sign In</NavLink>
                     </span>
                 </div>
             </div>

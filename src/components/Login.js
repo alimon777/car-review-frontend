@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect } from "react";
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 // import {useNavigate, useLocation } from 'react-router-dom';
 import { faExclamationCircle, faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -122,12 +122,12 @@ export default function Login() {
                         </div>
                     </form>
                 </div>
-                <div className="flex items-center justify-center mb-10 gap-2 select-none text-white">
+                <div className="flex items-center justify-center mb-10 gap-2 select-none text-white whitespace-nowrap">
                     <p>
                         Don't have an account?
                     </p>
                     <span className="block hover:text-orange-500 text-white">
-                        <Link to="register">Sign Up</Link>
+                        <NavLink to="/register">Sign Up</NavLink>
                     </span>
                 </div>
 

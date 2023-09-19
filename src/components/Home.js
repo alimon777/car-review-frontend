@@ -1,7 +1,7 @@
 import Card from './Card';
 function Home() {
     return (
-        <div className="flex flex-col bg-orange-50">
+        <div className="flex flex-col bg-blue-50">
             <div className='p-5 font-heading text-4xl'>Latest Reviews</div>
             <div className='flex flex-wrap justify-evenly'>
                 <Card />

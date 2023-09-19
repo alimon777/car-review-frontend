@@ -16,6 +16,7 @@ module.exports = {
       },
       backgroundImage: {
         'login-signup': "url('/src/assets/bg.jpeg')",
+        'nano': "url('/src/assets/nano.png')"
       }
     },
   },

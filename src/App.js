@@ -3,10 +3,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import Layout from "./components/Layout";
 import Login from "./components/Login";
-import MyReviews from "./components/MyReviews";
+import Cars from "./components/Cars";
 import NoPageFound from "./components/NoPageFound";
 import Register from "./components/Register";
-import Trending from "./components/Trending";
 
 export default function App() {
   return (
@@ -14,8 +13,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="my-reviews" element={<MyReviews />} />
-          <Route path="trending" element={<Trending />} />
+          <Route path="cars" element={<Cars />} />
           <Route path="*" element={<NoPageFound />} />
         </Route>
         <Route path="/login" element={<Login />} />

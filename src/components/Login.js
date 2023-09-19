@@ -1,18 +1,16 @@
 import { useRef, useState, useEffect } from "react";
 import { NavLink } from 'react-router-dom';
-// import {useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { faExclamationCircle, faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import axios from '../api/axios';
-// import useAuth from "../hooks/useAuth";
+import axios from '../api/axios';
 
-// const LOGIN_URL = '/auth';
+const LOGIN_URL = '/auth';
 
 export default function Login() {
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
     // const location = useLocation();
-    // const from = location?.state?.from?.pathname || '/home';
-    // const { setAuth } = useAuth();
+    const from = '/home';
     const userRef = useRef();
     const errRef = useRef();
     const [showPwd, setShowPwd] = useState(false);
@@ -37,21 +35,19 @@ export default function Login() {
         e.preventDefault();
 
         try {
-            // const response = await axios.post(LOGIN_URL,
-            //     JSON.stringify({ user, pwd }),
-            //     {
-            //         headers: { 'Content-Type': 'application/json' },
-            //         withCredentials: true
-            //     }
-            // );
-            // console.log(JSON.stringify(response?.data));
-            // //console.log(JSON.stringify(response));
-            // const accessToken = response?.data?.accessToken;
-            // setAuth({ user, accessToken });
+            const response = await axios.post(LOGIN_URL,
+                JSON.stringify({ username: user, password: pwd }),
+                {
+                    headers: { 'Content-Type': 'application/json' },
+                    withCredentials: true
+                }
+            );
+            console.log(JSON.stringify(response?.data));
+            console.log(JSON.stringify(response));
             console.log(user, pwd);
             setUser('');
             setPwd('');
-            // navigate(from, { replace: true });
+            navigate(from, { replace: true });
         } catch (err) {
             if (!err?.response) {
                 setErrMsg('No Server Response');
@@ -93,7 +89,7 @@ export default function Login() {
                                 value={user}
                                 required
                                 placeholder="Enter your username"
-                                spellcheck="false" />
+                                spellCheck="false" />
                         </div>
                         <div>
                             <label className="tracking-wide font-Outfit-Light select-none text-white" htmlFor="password">password</label>
